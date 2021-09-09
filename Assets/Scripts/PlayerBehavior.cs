@@ -112,9 +112,8 @@ public class PlayerBehavior : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        _ragdolling = true;
         Ragdoll();
     }
 
