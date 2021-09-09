@@ -112,9 +112,9 @@ public class PlayerBehavior : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        Ragdoll();
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    Ragdoll();
+    //}
 
 }
