@@ -17,8 +17,12 @@ public class DisablePlayerControlBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _animator.enabled = false;
-        GetComponent<PlayerBehavior>().enabled = false;
+        if (CompareTag("EnemyProjectile"))
+        {
+            _animator.enabled = false;
+            GetComponent<PlayerBehavior>().enabled = false;
+        }
+ 
         
     }
 }

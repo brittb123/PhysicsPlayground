@@ -100,7 +100,7 @@ public class PlayerBehavior : MonoBehaviour
             _animator.SetFloat("Speed", _desiredGroundVelocity.magnitude / Speed);
         }
         _animator.SetBool("Jump", !_isGrounded);
-        _animator.SetFloat("Vertical Speed", _desiredGroundVelocity.y / jumpStrength);
+        //_animator.SetFloat("Vertical Speed", _desiredGroundVelocity.y / jumpStrength);
 
         _playerController.Move((_desiredGroundVelocity + _desiredAirVelocity) * Time.deltaTime);
 
