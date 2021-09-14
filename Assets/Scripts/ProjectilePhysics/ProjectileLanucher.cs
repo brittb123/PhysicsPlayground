@@ -8,6 +8,7 @@ public class ProjectileLanucher : MonoBehaviour
     public Transform target;
     public Rigidbody projectille;
     public float shootTimer;
+    public float DespawnTimer;
 
     public float airTime;
 
@@ -34,6 +35,7 @@ public class ProjectileLanucher : MonoBehaviour
         {
             _shootTimer -= Time.deltaTime;
         }
+
     }
 
     public void LanuchProjectile()

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class DisablePlayerControlBehavior : MonoBehaviour
 {
+
+    [SerializeField]
+    private PlayerFireballBehavior _launcher;
+
+
     [SerializeField]
     private Animator _animator;
 
@@ -17,12 +22,12 @@ public class DisablePlayerControlBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("EnemyProjectile"))
+        if (other.CompareTag("EnemyProjectile"))
         {
-            _animator.enabled = false;
-            GetComponent<PlayerBehavior>().enabled = false;
+          _animator.enabled = false;
+          _player.GetComponent<PlayerBehavior>().enabled = false;
+          _launcher.GetComponent<PlayerFireballBehavior>().enabled = false;
         }
- 
-        
+           
     }
 }

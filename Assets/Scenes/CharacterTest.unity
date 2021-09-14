@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1619690e66d745e48b22828288127894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _launcher: {fileID: 2107472960}
   _animator: {fileID: 338379435}
   _player: {fileID: 5536225959617780926}
 --- !u!1001 &125884606
@@ -917,11 +918,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240628845}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &338379433 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
-  m_PrefabInstance: {fileID: 125884606}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &338379434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
@@ -932,18 +928,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
   m_PrefabInstance: {fileID: 125884606}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &338379436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338379433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653f525002e0e464489014853454a5d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &350253166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,7 +1670,6 @@ GameObject:
   - component: {fileID: 888187454}
   - component: {fileID: 888187453}
   - component: {fileID: 888187452}
-  - component: {fileID: 888187456}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1770,24 +1753,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &888187456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888187451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 696bba2d381289b46a4de8d27d97ba5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformRender: {fileID: 888187453}
-  Collider: {fileID: 888187452}
-  SolidMaterial: {fileID: 2100000, guid: 76d3cad03a7fbd74da56ff44ccfca6e9, type: 2}
-  DisappearingMaterialColor: {fileID: 2100000, guid: 88157e674d7d0314db76940c73b69405, type: 2}
-  TimeUntilVanish: 5
-  TimeTillReappear: 6
 --- !u!1 &930965817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100062, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
@@ -2929,7 +2894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3895780915108735672, guid: 81a47df5b582d1344a94acbb1fa5d001, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.5820568
+      value: 1.5820585
       objectReference: {fileID: 0}
     - target: {fileID: 5489154743443256034, guid: 81a47df5b582d1344a94acbb1fa5d001, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2977,15 +2942,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6991485554421640786, guid: 81a47df5b582d1344a94acbb1fa5d001, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.0066514015
+      value: -0.006652832
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991485554421640786, guid: 81a47df5b582d1344a94acbb1fa5d001, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 1.6535106
       objectReference: {fileID: 0}
     - target: {fileID: 7597154511641945810, guid: 81a47df5b582d1344a94acbb1fa5d001, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -1.7071148
+      value: -1.7071129
       objectReference: {fileID: 0}
     - target: {fileID: 8202570964684604405, guid: 81a47df5b582d1344a94acbb1fa5d001, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -1.7785685
+      value: -1.7785666
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81a47df5b582d1344a94acbb1fa5d001, type: 3}
@@ -3836,7 +3805,6 @@ MonoBehaviour:
   Speed: 5
   _playerController: {fileID: 6433443248516067457}
   _animator: {fileID: 338379435}
-  rigidbodies: []
   _ragdolling: 1
 --- !u!1 &5536225959617780926
 GameObject:

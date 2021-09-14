@@ -25,25 +25,13 @@ public class PlayerBehavior : MonoBehaviour
 
     private bool _needToJump;
 
-    public List<Rigidbody> rigidbodies = new List<Rigidbody>();
 
-    [SerializeField]
-    private bool _ragdolling;
 
     private void Awake()
     {
         _playerController.GetComponent<CharacterController>();
     }
 
-    private void Ragdoll()
-    {
-        if (_ragdolling)
-        {
-            _desiredGroundVelocity = Vector3.zero;
-            _needToJump = false;
-            _animator.enabled = !_animator.enabled;
-        }
-    }
 
     private void Update()
     {
@@ -111,10 +99,4 @@ public class PlayerBehavior : MonoBehaviour
         }
 
     }
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    Ragdoll();
-    //}
-
 }
