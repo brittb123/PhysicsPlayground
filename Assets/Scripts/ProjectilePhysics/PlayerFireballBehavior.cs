@@ -64,14 +64,6 @@ public class PlayerFireballBehavior : MonoBehaviour
         return finalVelocity;
     }
 
-    private Vector3 FindDisplacement(Vector3 initialVelocity, Vector3 acceleration, float time)
-    {
-        //deltaX = v0t + (1/2)(a*t^2)
-        Vector3 displacement = initialVelocity * time + (1 / 2) * acceleration * time * time;
-
-        return displacement;
-    }
-
     private Vector3 FindInitialVelocity(Vector3 displacement, Vector3 acceleration, float time)
     {
         //deltaX - (1/2)*a*t^2 = v0*t

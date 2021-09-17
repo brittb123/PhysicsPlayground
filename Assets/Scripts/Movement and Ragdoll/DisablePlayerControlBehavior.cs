@@ -15,6 +15,9 @@ public class DisablePlayerControlBehavior : MonoBehaviour
     [SerializeField]
     private GameObject _player;
 
+    [SerializeField]
+    private Rigidbody _playerBody;
+
     private void Start()
     {
         _player.GetComponent<PlayerBehavior>();
@@ -28,6 +31,10 @@ public class DisablePlayerControlBehavior : MonoBehaviour
           _player.GetComponent<PlayerBehavior>().enabled = false;
           _launcher.GetComponent<PlayerFireballBehavior>().enabled = false;
         }
-           
+
+        if (other.CompareTag("JumpPad"))
+        {
+            _playerBody.AddForce(0, 10, 0);
+        }
     }
 }
