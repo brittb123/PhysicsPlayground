@@ -23,6 +23,8 @@ public class HealthBehavior : MonoBehaviour
             _health = 0;
         }
     }
+
+    // When damage is need this function is used to subtract it
     public void takeDamage(float damage)
     {
         _health -= damage;
