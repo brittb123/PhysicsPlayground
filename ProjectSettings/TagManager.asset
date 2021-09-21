@@ -8,6 +8,7 @@ TagManager:
   - Fireball
   - JumpPad
   - PlatformActivator
+  - ButtonToFire
   layers:
   - Default
   - TransparentFX

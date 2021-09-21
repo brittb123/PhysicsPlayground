@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class JumppadScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Tooltip("Gets the Render for the first platform")]
+    public MeshRenderer platform1Render;
+
+    [Tooltip("The render of the second platform")]
+    public MeshRenderer platform2Render;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        // If the player enters the trigger area..
+       if(other.CompareTag("Player"))
+       {
+            // Turn on the render for both platforms to see in the scene!
+            platform1Render.enabled = true;
+            platform2Render.enabled = true;
+       }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
