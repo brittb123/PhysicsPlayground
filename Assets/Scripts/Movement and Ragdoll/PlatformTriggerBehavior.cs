@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumppadScript : MonoBehaviour
+public class PlatformTriggerBehavior : MonoBehaviour
 {
     [Tooltip("Gets the Render for the first platform")]
     public MeshRenderer platform1Render;
